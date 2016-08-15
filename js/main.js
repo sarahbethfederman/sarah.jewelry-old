@@ -1,6 +1,6 @@
-shopClient.fetchProduct(1234)
+shopClient.fetchAllProducts(products)
   .then(function (product) {
-    console.log(product);
+    console.log(products);
   })
   .catch(function () {
     console.log('Request failed');

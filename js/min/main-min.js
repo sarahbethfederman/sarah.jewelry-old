@@ -1,1 +1,1 @@
-shopClient.fetchProduct(1234).then(function(o){console.log(o)})["catch"](function(){console.log("Request failed")});
+var shopClient=ShopifyBuy.buildClient({apiKey:"55891650a283517c6384406ab128e01d",myShopifyDomain:"sarah-jewelry",appId:"6"});shopClient.fetchAllProducts(products).then(function(o){console.log(products)})["catch"](function(){console.log("Request failed")});
