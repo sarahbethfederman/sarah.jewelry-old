@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>sarah.jewelry</title>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <h1>{{title}}</h1>
+
+        <nav>
+            <ul>
+                <li>shop</li>
+                <li>about</li>
+                <li>contact</li>
+                <li>cart</li>
+            </ul>
+        </nav>
+
+        <main>
+            <p>CONTENT</p>
+        </main>
+
+        {{#each scripts as |script|}}
+            <script src="{{script}}"></script>
+        {{/each}}
+    </body>
+</html>
