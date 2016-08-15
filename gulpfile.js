@@ -20,14 +20,8 @@ var cssFiles = './assets/sass/**/*.scss';
 var cssRoot = './assets/sass/style.scss';
 var cssDest = './build/css';
 var templateFiles = './views/**/*.hbs';
-// data for precompileing templates
+// data for precompiling templates
 var templateData = require('./data.json');
-
-gulp.task('lint', function() {
-  gulp.src(jsServer)
-    .pipe(jshint())
-    .pipe(jshint.reporter('default'));
-});
 
 gulp.task('styles', function() {
 	sass(cssRoot, {sourcemap: true, style: 'compressed'})
@@ -47,24 +41,13 @@ gulp.task('scripts', function() {
 
 // watch for changes
 gulp.task('watch', function () {
-	// lint node files
-	//gulp.watch(jsServer, ['lint']);
 	// concat/uglify public js
 	gulp.watch(jsFiles, ['scripts']);
 	// watch sass files
-	gulp.watch(cssFiles, ['styles'])
+	gulp.watch(cssFiles, ['styles']);
+    // wach templates
+    gulp.watch(templateFiles, ['templates']);
 });
-
-// gulp.task('templates', function(fileName) {
-//     var options = {
-//         batch: templateFiles
-//     };
-
-//     return gulp.src(fileName)
-//         .pipe(handlebars(templateData, options))
-//         .pipe(rename(fileName.split('.')[0] + '.hbs'))
-//         .pipe(gulp.dest('dist'));
-// });
 
 gulp.task('templates', function() {
     return gulp.src(templateFiles)
@@ -77,7 +60,7 @@ gulp.task('templates', function() {
         return gulp.src(file.path)
             //compile each file
             .pipe(handlebars(templateData, options))
-            .pipe(rename(file.stem + '.html'))
+            .pipe(rename(file.relative.split('.')[0] + '.html'))
 
         }))
         .pipe(gulp.dest('build'));

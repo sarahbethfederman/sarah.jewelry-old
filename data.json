@@ -3,5 +3,19 @@
     "scripts": [
         "http://sdks.shopifycdn.com/js-buy-sdk/latest/shopify-buy.polyfilled.globals.min.js",
         "js/global-min.js" 
+    ],
+    "nav": [
+        {
+            "name": "shop",
+            "url": "shop"
+        },
+        {
+            "name": "about",
+            "url": "about"
+        },
+        {
+            "name": "contact",
+            "url": "contact"
+        }
     ]
 }
