@@ -1,0 +1,1 @@
+shopClient.fetchProduct(1234).then(function(o){console.log(o)})["catch"](function(){console.log("Request failed")});
