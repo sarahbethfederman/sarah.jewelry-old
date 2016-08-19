@@ -4,7 +4,7 @@ var gulp = require('gulp');
 var gulpUtil = require('gulp-util');
 var sass = require('gulp-ruby-sass');
 var path = require('path');
-var sourcemaps = require('gulp-sourcemaps'); 
+var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 var jshint = require('gulp-jshint');
 var uglify = require('gulp-uglify');
@@ -15,10 +15,11 @@ var flatmap = require('gulp-flatmap');
 
 // Paths
 var jsFiles = ['./assets/js/**/*.js', '!./assets/js/global*.js']; // ! ignores output files (avoid infinite loop)
-var jsDest = './build/js'; 
+var jsDest = './docs/js';
 var cssFiles = './assets/sass/**/*.scss';
 var cssRoot = './assets/sass/style.scss';
-var cssDest = './build/css';
+var cssDest = './docs/css';
+var buildDest = './docs';
 var templateFiles = './views/**/*.hbs';
 // data for precompiling templates
 var templateData = require('./data.json');
@@ -52,7 +53,7 @@ gulp.task('watch', function () {
 gulp.task('templates', function() {
     return gulp.src(templateFiles)
         .pipe(flatmap(function(stream, file){
-        
+
         var options = {
             batch: ['./views/partials']
         };
@@ -63,7 +64,7 @@ gulp.task('templates', function() {
             .pipe(rename(file.relative.split('.')[0] + '.html'))
 
         }))
-        .pipe(gulp.dest('build'));
+        .pipe(gulp.dest(buildDest));
 });
 
 gulp.task('build', ['scripts', 'styles', 'templates']);
