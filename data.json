@@ -1,7 +1,7 @@
 {
     "title": "sarah.jewelry",
     "scripts": [
-        "http://sdks.shopifycdn.com/js-buy-sdk/latest/shopify-buy.polyfilled.globals.min.js",
+        "https://sdks.shopifycdn.com/js-buy-sdk/latest/shopify-buy.polyfilled.globals.min.js",
         "js/global.min.js" 
     ],
     "nav": [
