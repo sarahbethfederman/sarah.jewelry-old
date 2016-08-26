@@ -1,9 +1,4 @@
-<html>
-    <head>
-        <title>sarah.jewelry</title>
-        <link rel="stylesheet" href="css/main.css">
-    </head>
-    <body>
+{{> header}}
         <h1>{{title}}</h1>
 
         <nav>
@@ -11,7 +6,7 @@
                 {{#each nav as |nav|}}
                     <li><a href="{{nav.url}}">{{nav.name}}</a></li>
                 {{/each}}
-                
+
                 <li>cart</li>
             </ul>
         </nav>
@@ -20,8 +15,6 @@
             <p>CONTENT</p>
         </main>
 
-        {{#each scripts as |script|}}
-            <script src="{{script}}"></script>
-        {{/each}}
+        {{> footer}}
     </body>
 </html>
