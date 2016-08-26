@@ -20,7 +20,10 @@ var cssFiles = './assets/sass/**/*.scss';
 var cssRoot = './assets/sass/style.scss';
 var cssDest = './docs/css';
 var buildDest = './docs';
-var templateFiles = ['./views/**/*.hbs', '!./views/partials/*.hbs', '!./views/layouts/*.hbs'];
+// All template files to watch
+var templateFiles = './views/**/*.hbs';
+// Templates to compile to html
+var templateCompileFiles = ['./views/**/*.hbs', '!./views/partials/*.hbs', '!./views/layouts/*.hbs'];
 // data for precompiling templates
 var templateData = require('./data.json');
 
@@ -51,7 +54,7 @@ gulp.task('watch', function () {
 });
 
 gulp.task('templates', function() {
-    return gulp.src(templateFiles)
+    return gulp.src(templateCompileFiles)
         .pipe(flatmap(function(stream, file){
 
         var options = {
