@@ -4,6 +4,7 @@ var gulp = require('gulp');
 var sass = require('gulp-ruby-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var uglify = require('gulp-uglify');
+var rename = require('gulp-rename');
 var sourcemaps = require('gulp-sourcemaps');
 var handlebars = require('gulp-compile-handlebars');
 var flatmap = require('gulp-flatmap');
