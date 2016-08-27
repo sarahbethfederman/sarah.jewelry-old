@@ -1,7 +1,14 @@
-<nav>
+<nav class="main-nav">
+    <h1 class="logo">SF</h1>
     <ul>
         {{#each nav as |nav|}}
             <li><a href="{{nav.url}}">{{nav.name}}</a></li>
         {{/each}}
+        <li><a id="cart-link">Cart</a></li>
     </ul>
+
+    <p class="main-subtitle">
+        Jewelry by
+        <br>Sarah Federman
+    </p>
 </nav>

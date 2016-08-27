@@ -3,8 +3,8 @@ $medium-screen: 600px;
 $large-screen: 900px;
 
 // Typography
-$base-font-family: $font-stack-system;
-$heading-font-family: $base-font-family;
+$base-font-family: "brandon-grotesque", sans-serif;
+$heading-font-family: "brandon-grotesque", sans-serif;
 
 // Font Sizes
 $base-font-size: 1em;
@@ -13,6 +13,10 @@ $base-font-size: 1em;
 $base-line-height: 1.5;
 $heading-line-height: 1.2;
 
+// Font weight
+$bold: 900;
+$regular: 400;
+
 // Other Sizes
 $base-border-radius: 3px;
 $base-spacing: $base-line-height * 1em;
@@ -20,9 +24,9 @@ $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
 // Colors
-$blue: #1565c0;
+$blue: #72CAC3;
 $dark-gray: #333;
-$medium-gray: #999;
+$medium-gray: #A3A3A3;
 $light-gray: #ddd;
 
 // Font Colors

@@ -1,0 +1,21 @@
+body {
+  border: 8px solid $dark-gray;
+}
+
+main {
+  width: 80%;
+  margin-left: 18%;
+  margin-top: rem(80);
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: rem(24);
+  letter-spacing: 1px;
+  color: $blue;
+}
+
+.logo {
+  font-size: rem(60);
+  color: $dark-gray;
+}

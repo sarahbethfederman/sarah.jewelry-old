@@ -77,7 +77,7 @@ gulp.task('scripts', function() {
 gulp.task('watch', function () {
   gulp.watch(jsFiles, ['scripts']);  
   // watch sass files
-  gulp.watch(cssFiles, ['styles']);
+  gulp.watch(cssFiles, ['styles']); 
   // wach templates
   gulp.watch(templateFiles, ['templates']);
 });

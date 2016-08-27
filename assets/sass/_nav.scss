@@ -1,0 +1,46 @@
+.main-nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 18%;
+  padding: rem(30);
+  letter-spacing: 1px;
+  a {
+    color: $dark-gray;
+    font-size: rem(16);
+    text-transform: uppercase;
+    font-weight: $bold;
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  ul {
+    margin-bottom: rem(30);
+    li {
+      margin-bottom: rem(12);
+    }
+  }
+}
+
+.logo {
+  margin-top: 0;
+  margin-bottom: rem(30);
+  letter-spacing: 5px;
+}
+
+.main-subtitle {
+  font-size: rem(14);
+  text-transform: uppercase;
+  font-weight: $bold;
+  &:first-line {
+    color: $blue;
+  }
+}
+
+#cart-link {
+  position: fixed;
+  top: rem(30);
+  right: rem(30);
+}
