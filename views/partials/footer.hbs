@@ -1,3 +1,5 @@
 {{#each scripts as |script|}}
-    <script src="{{script}}"></script>
+    {{#unless script.head}}
+        <script src="{{script}}"></script>
+    {{/unless}}
 {{/each}}

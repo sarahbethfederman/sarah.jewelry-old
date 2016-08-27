@@ -1,7 +1,18 @@
 <html>
     <head>
-        <title>sarah.jewelry</title>
-        <link rel="stylesheet" href="css/style.css">
+        <title>{{title}}</title>
+        {{#each scripts as |script|}}
+            {{#if script.head}}
+                {{#if script.url}}
+                    <script src="{{script.url}}"></script>
+                {{else}}
+                    {{{script.raw}}}
+                {{/if}}
+            {{/if}}
+        {{/each}}
+        {{#each styles as |style|}}
+            <link rel="stylesheet" href="{{styles}}">
+        {{/each}}
     </head>
     <body>
         {{> nav}}

@@ -1,8 +1,25 @@
 {
     "title": "sarah.jewelry",
     "scripts": [
-        "https://sdks.shopifycdn.com/js-buy-sdk/latest/shopify-buy.polyfilled.globals.min.js",
-        "js/global.min.js" 
+        {
+            "url": "https://sdks.shopifycdn.com/js-buy-sdk/latest/shopify-buy.polyfilled.globals.min.js",
+            "head": false
+        },
+        {
+            "url": "js/global.min.js",
+            "head": false
+        },
+        {
+            "url": "https://use.typekit.net/fre6qwk.js",
+            "head": true
+        },
+        {
+            "raw": "<script>try{Typekit.load({ async: true });}catch(e){}</script>",
+            "head": true
+        }
+    ],
+    "styles": [
+        "css/style.css"
     ],
     "nav": [
         {

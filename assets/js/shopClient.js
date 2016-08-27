@@ -1,5 +1,7 @@
+var keys = require('./config.js');
+
 var shopClient = ShopifyBuy.buildClient({
-  apiKey: '55891650a283517c6384406ab128e01d',
+  apiKey: keys.shopifyKey,
   myShopifyDomain: 'sarah-jewelry',
   appId: '6'
 });

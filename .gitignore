@@ -2,3 +2,4 @@ config.codekit
 .codekit-cache
 node_modules
 .sass-cache
+assets/js/config.js
