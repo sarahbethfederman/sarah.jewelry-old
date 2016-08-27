@@ -5,3 +5,5 @@ var shopClient = ShopifyBuy.buildClient({
   myShopifyDomain: 'sarah-jewelry',
   appId: '6'
 });
+
+module.exports = shopClient;
