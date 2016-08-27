@@ -40,7 +40,7 @@ gulp.task('templates', function() {
         .pipe(flatmap(function(stream, file){
 
         var options = {
-            batch: ['./views/partials']
+            batch: ['./views/partials', './views/layouts']
         };
 
         return gulp.src(file.path)
