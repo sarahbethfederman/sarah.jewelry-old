@@ -1,1 +1,20 @@
-<h3></h3> 
+{{#> main}}
+  {{>breadcrumbs}}
+
+  <section class="product-info">
+    <h2>{{product.name}}</h2>
+    <p>{{product.description}}</p>
+    <div class="product-details">
+      {{product.details}}
+    </div>
+
+    {{>sharelinks}}
+  </section>
+
+  <section class="product-pictures">
+    <img class="main-image" src="#">
+    <ul class="thumbnails">
+      <li><img class="thumbail-image" data-image="#" src=""></li>
+    </ul>
+  </section>
+{{/main}}
